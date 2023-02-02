@@ -1,1 +1,28 @@
-<p>profil works!</p>
+<section>
+    <!-- Cliquer pour afficher ou masquer l'édition -->
+    <a (click)="edit = !edit">Editer mon profil</a>
+    <article *ngIf="!edit">
+        <h2>Mon profil</h2>
+        <h3>{{ users.profil.nom }} {{ users.profil.prenom }}</h3>
+        <img [src]="users.profil.photo">
+        <ul>
+            <li>Adresse : {{ users.profil.adresse }}</li>
+            <li>Téléphone : {{ users.profil.tel }}</li>
+            <li>Email : {{ users.profil.email }}</li>
+        </ul>
+    </article>
+    <article *ngIf="edit">
+        <form>
+            <input name="nom" [(ngModel)]="users.profil.nom">
+            <input name="prenom" [(ngModel)]="users.profil.prenom">
+            <input name="adresse" [(ngModel)]="users.profil.adresse">
+            <input name="tel" [(ngModel)]="users.profil.tel">
+            <input name="email" [(ngModel)]="users.profil.email">
+            <input name="photo" [(ngModel)]="users.profil.photo">
+            <div>
+                <input type="reset" value="Annuler" (click)="edit = false">
+                <input type="submit" value="Enregister">
+            </div>
+        </form>
+    </article>
+</section>

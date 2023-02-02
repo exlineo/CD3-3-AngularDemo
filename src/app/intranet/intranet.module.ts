@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IntranetRoutingModule } from './intranet-routing.module';
 import { IntranetComponent } from './pages/intranet/intranet.component';
 import { ProfilComponent } from './pages/profil/profil.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ProfilComponent } from './pages/profil/profil.component';
   ],
   imports: [
     CommonModule,
-    IntranetRoutingModule
+    IntranetRoutingModule,
+    FormsModule
   ]
 })
 export class IntranetModule { }

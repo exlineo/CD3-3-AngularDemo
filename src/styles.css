@@ -1,64 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
-html, body{
-    padding:0;
-    margin:0;
-    height: 100%;
-    width:100%;
-    font-size:16px;
+:root {
+    --grisclair: #E9E9E9;
+    --jaune: #F7C45F;
+    --orange: #b8820f;
+    --vert: #33A537;
+    --vertsombre: #1d5a1f;
+    --bleu: #28364A;
+    --sombre: #202A3A;
+    --rose: #F14668;
+    --jaunea: rgba(247, 196, 95, 0.3);
 }
+
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
 * {
     box-sizing: border-box;
 }
-app-root{
-    display:flex;
+
+app-root {
+    display: flex;
     flex-flow: column nowrap;
     overflow: hidden;
 }
-main{
-    display:flex;
-    width:100vw;
-    padding:10px 20px;
-    height:calc(100vh - 40px);
+
+main {
+    display: flex;
+    width: 100vw;
+    padding: 10px 20px;
+    height: calc(100vh - 40px);
 }
-app-pied{
-    width:100vw;
-    height:40px;
+
+app-pied {
+    width: 100vw;
+    height: 40px;
 }
-header nav ul, footer nav ul{
-    display:flex;
+a{
+    color:var(--sombre);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--grisclair);
+    background-color: #28364A;
+}
+header nav ul,
+footer nav ul {
+    display: flex;
     flex-flow: row nowrap;
 }
-nav ul li{
-    margin:5px;
+
+nav ul li {
     list-style: none;
 }
-form{
+
+nav a {
+    padding: 8px 16px;
+    margin:5px;
+    background-color: var(--jaune);
+    transition:all .3s ease;
+}
+nav a:hover{
+    background-color: var(--rose);
+}
+footer nav a {
+    background-color: none;
+}
+form {
     display: flex;
     flex-flow: column nowrap;
 }
-form > *{
-    margin:5px 10px;
+
+form>* {
+    margin: 5px 10px;
 }
-form > div {
+
+form>div {
     display: flex;
     flex-flow: row nowrap;
 }
-input{
-    width:fit-content;
+
+input {
+    width: fit-content;
     border: none;
-    padding:8px 16px;
+    padding: 8px 16px;
     /* width:max-content; */
 }
+
 /* Cibler les inputs de type submit */
-input[type=submit]{
-    background-color:greenyellow;
+input[type=submit] {
+    background-color: greenyellow;
 }
-input.ng-valid{
+
+input.ng-valid {
     border-bottom: 4px solid green;
 }
-input.ng-invalid{
-    border-bottom:4px solid red;
+
+input.ng-invalid {
+    border-bottom: 4px solid red;
 }
-input[disabled]{
+
+input[disabled] {
     background-color: grey;
 }
