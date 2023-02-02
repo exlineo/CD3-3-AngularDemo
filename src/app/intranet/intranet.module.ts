@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { IntranetRoutingModule } from './intranet-routing.module';
 import { IntranetComponent } from './pages/intranet/intranet.component';
+import { ProfilComponent } from './pages/profil/profil.component';
 
 
 @NgModule({
   declarations: [
-    IntranetComponent
+    IntranetComponent,
+    ProfilComponent
   ],
   imports: [
     CommonModule,
