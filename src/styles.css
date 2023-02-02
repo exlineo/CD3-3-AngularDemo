@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+html, body{
+    padding:0;
+    margin:0;
+    height: 100%;
+    width:100%;
+    font-size:16px;
+}
+* {
+    box-sizing: border-box;
+}
+app-root{
+    display:flex;
+    flex-flow: column nowrap;
+    overflow: hidden;
+}
+main{
+    display:flex;
+    width:100vw;
+    padding:10px 20px;
+    height:calc(100vh - 40px);
+}
+app-pied{
+    width:100vw;
+    height:40px;
+}
+header nav ul, footer nav ul{
+    display:flex;
+    flex-flow: row nowrap;
+}
+nav ul li{
+    margin:5px;
+    list-style: none;
+}
+form{
+    display: flex;
+    flex-flow: column nowrap;
+}
+form > *{
+    margin:5px 10px;
+}
+form > div {
+    display: flex;
+    flex-flow: row nowrap;
+}
+input{
+    width:fit-content;
+    border: none;
+    padding:8px 16px;
+    /* width:max-content; */
+}
+/* Cibler les inputs de type submit */
+input[type=submit]{
+    background-color:greenyellow;
+}
+input.ng-valid{
+    border-bottom: 4px solid green;
+}
+input.ng-invalid{
+    border-bottom:4px solid red;
+}
+input[disabled]{
+    background-color: grey;
+}
