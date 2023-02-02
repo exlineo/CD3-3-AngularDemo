@@ -8,6 +8,7 @@ import { RgpdComponent } from './extranet/rgpd/rgpd.component';
 // Application routes to chemine inside the pages
 const routes: Routes = [
   { path:'', component:ConnexionComponent },
+  { path:'intranet', loadChildren: () => import('./intranet/intranet.module').then(m => m.IntranetModule)},
   { path:'rgpd', component:RgpdComponent },
   { path:'mentions', component:MentionsLegalesComponent },
   { path:'infos', component:InfosComponent },

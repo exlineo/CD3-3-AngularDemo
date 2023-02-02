@@ -10,6 +10,7 @@ import { RgpdComponent } from './extranet/rgpd/rgpd.component';
 import { MentionsLegalesComponent } from './extranet/mentions-legales/mentions-legales.component';
 import { InfosComponent } from './extranet/infos/infos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
     // ReactiveFormsModule
   ],
   providers: [],

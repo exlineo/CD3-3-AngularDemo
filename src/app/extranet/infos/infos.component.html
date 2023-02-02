@@ -1,3 +1,6 @@
-<article ericAgaintsTheMachines>
-    <h2>Bienvenue sur l'application super gégé des wonderfuls twins !</h2>
+<h2>Bienvenue sur l'application super gégé des wonderfuls twins !</h2>
+<article *ngFor="let actu of actus.actualites">
+    <img [src]="actu.image.url" [alt]="actu.image.alt">
+    <h3>{{ actu.titre }}</h3>
+    <p>{{ actu.description }}</p>
 </article>

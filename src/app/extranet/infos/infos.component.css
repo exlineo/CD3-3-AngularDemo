@@ -1,0 +1,18 @@
+:host{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    overflow-x:hidden;
+    overflow-y: auto;
+}
+h2{
+    width:100%;
+}
+article{
+    max-width: 45%;
+    margin:20px;
+    box-sizing: border-box;
+}
+article img{
+    width:100%;
+}

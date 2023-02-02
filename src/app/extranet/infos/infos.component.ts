@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ConnexionService } from '../utils/services/connexion.service';
 import { InfosService } from '../utils/services/infos.service';
 
 @Component({
@@ -13,6 +12,7 @@ export class InfosComponent implements OnInit, OnDestroy {
 
   }
   ngOnInit(){
+    this.actus.getActus();
   }
   ngOnDestroy(){
 

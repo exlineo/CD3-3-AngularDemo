@@ -1,0 +1,18 @@
+[
+    {
+        "titre": "C'est nouveau, ça vient de sortir",
+        "description": "Il parait qu'il s'est passé un truc nouveau à Pau. L'événement a remué les coeurs des béarnais. Il était temps.",
+        "image": {
+            "url": "https://pbs.twimg.com/media/EyhGqfhXEAIVbSC?format=jpg&name=large",
+            "alt": "Coucou"
+        }
+    },
+    {
+        "titre": "Il est là, il est arrivé !!!!",
+        "description": "C'est Eric, c'est l'unique, le rouge. Il a traversé les époques pour venir nous donner son message ! Les coeurs vibrent encore dans l'impatience.",
+        "image": {
+            "url": "https://islande24.fr/wp-content/uploads/2019/02/ScreenShot2019-02-11at19.27.40.png",
+            "legende": "Gare à tes fesses, Eric débarque"
+        }
+    }
+]
