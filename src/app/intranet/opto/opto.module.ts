@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { OptoRoutingModule } from './opto-routing.module';
 import { AccueilOptoComponent } from './accueil-opto/accueil-opto.component';
+import { PartageModule } from '../utils/partage.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { AccueilOptoComponent } from './accueil-opto/accueil-opto.component';
   ],
   imports: [
     CommonModule,
-    OptoRoutingModule
+    OptoRoutingModule,
+    PartageModule
   ]
 })
 export class OptoModule { }

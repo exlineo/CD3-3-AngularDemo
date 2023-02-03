@@ -1,0 +1,26 @@
+:host{
+    display:flex;
+    flex-flow: column nowrap;
+}
+section{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    overflow-x:hidden;
+    overflow-y:auto;
+    height:calc(100vh - 100px);
+}
+article{
+    width:45%;
+}
+:host > div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width:100%;
+}
+:host > div > button{
+    margin:5px;
+    width:fit-content;
+    padding:10px;
+}

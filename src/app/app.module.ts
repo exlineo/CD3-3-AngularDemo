@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InfoComponent } from './extranet/info/info.component';
 import { TokenInterceptor } from './extranet/utils/security/token.interceptor';
+import { Aie401Interceptor } from './extranet/utils/security/aie-401.interceptor';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TokenInterceptor } from './extranet/utils/security/token.interceptor';
     // ReactiveFormsModule
   ],
   providers: [
-    {provide:HTTP_INTERCEPTORS, useClass:TokenInterceptor, multi:true}
+    {provide:HTTP_INTERCEPTORS, useClass:TokenInterceptor, multi:true},
+    {provide:HTTP_INTERCEPTORS, useClass:Aie401Interceptor, multi:true}
   ],
   bootstrap: [AppComponent]
 })

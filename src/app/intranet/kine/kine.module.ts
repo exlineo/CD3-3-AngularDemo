@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { KineRoutingModule } from './kine-routing.module';
 import { AccueilKineComponent } from './accueil-kine/accueil-kine.component';
+import { PartageModule } from '../utils/partage.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { AccueilKineComponent } from './accueil-kine/accueil-kine.component';
     ],
   imports: [
     CommonModule,
-    KineRoutingModule
+    KineRoutingModule,
+    PartageModule
   ]
 })
 export class KineModule { }

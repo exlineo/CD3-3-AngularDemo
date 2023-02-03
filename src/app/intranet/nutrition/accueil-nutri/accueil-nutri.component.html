@@ -1,0 +1,22 @@
+<input name="filtrer" [(ngModel)]="filtre">
+
+<section>
+    <article *ngFor="let a of nutri.aliments | aliments:filtre | slice:debut:debut+ecart let i=index">
+        <h3>{{ (debut+i) + ' - ' + a.alim_nom_fr | uppercase}}</h3>
+        <ul>
+            <li>
+                Alcool : {{ a['Alcool (g\/100 g)'] }}
+            </li>
+            <li>
+                Sucres : {{ a['Sucres (g\/100 g)'] }}
+            </li>
+            <li>
+                Myristique : {{ a['AG 14:0, myristique (g\/100 g)'] }}
+            </li>
+        </ul>
+    </article>
+</section>
+<div>
+    <button (click)="retourPagination()"> < </button>
+    <button (click)="suitePagination()"> > </button>
+</div>

@@ -7,6 +7,7 @@ const routes: Routes = [
   { path:'', component:IntranetComponent, children:[
     { path:'', component:ProfilComponent},
     { path:'profil', component:ProfilComponent},
+    { path:'nutri', loadChildren: () => import('./nutrition/nutrition.module').then(m => m.NutritionModule)},
     { path:'opto', loadChildren: () => import('./opto/opto.module').then(m => m.OptoModule)},
     { path:'kine', loadChildren: () => import('./kine/kine.module').then(m => m.KineModule)},
   ] }
