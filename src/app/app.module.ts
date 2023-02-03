@@ -10,7 +10,9 @@ import { RgpdComponent } from './extranet/rgpd/rgpd.component';
 import { MentionsLegalesComponent } from './extranet/mentions-legales/mentions-legales.component';
 import { InfosComponent } from './extranet/infos/infos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InfoComponent } from './extranet/info/info.component';
+import { TokenInterceptor } from './extranet/utils/security/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     RgpdComponent,
     MentionsLegalesComponent,
     InfosComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
     // ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS, useClass:TokenInterceptor, multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

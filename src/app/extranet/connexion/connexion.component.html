@@ -1,5 +1,5 @@
 <app-infos></app-infos>
-<form #f="ngForm">
+<form #f="ngForm" (submit)="con.seConnecter()">
     <h3>{{ titre }}</h3>
     
     <input name="id" [(ngModel)]="con.connexion.id.value" #ctlId="ngModel" (input)="ditMoiQuoiDansObjetConnection()"

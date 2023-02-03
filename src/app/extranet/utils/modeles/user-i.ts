@@ -6,4 +6,6 @@ export interface UserI {
     tel?:string;
     email?:string;
     photo?:string;
+    status?:string | number;
+    token?:string;
 }

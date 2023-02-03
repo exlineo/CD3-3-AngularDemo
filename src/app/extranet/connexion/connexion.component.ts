@@ -16,4 +16,5 @@ export class ConnexionComponent {
   ditMoiQuoiDansObjetConnection(){
     console.log(this.con.connexion);
   }
+ 
 }

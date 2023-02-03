@@ -1,6 +1,8 @@
 <h2>Bienvenue sur l'application super gégé des wonderfuls twins !</h2>
-<article *ngFor="let actu of actus.actualites">
-    <img [src]="actu.image.url" [alt]="actu.image.alt">
-    <h3>{{ actu.titre }}</h3>
+<article *ngFor="let actu of actus.actualites; let i = index">
+    <a [routerLink]="['/info', i]">
+        <img [src]="actu.image.url" [alt]="actu.image.alt">
+        <h3>{{ actu.titre }}</h3>
+    </a>
     <p>{{ actu.description }}</p>
 </article>
